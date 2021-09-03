@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: url(img/bg-img/free.png); */
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    height: 400px;
+    width: 280px;
+    margin: 30px;
+    display: flex;
+    position: relative;
+    background: url(img/bg-img/free.png);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    ;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    transform: scale(1);
+    transition: .5s ease-out;
+}
+
+.container .card:hover {
+    background: url(img/bg-img/maintenance-2.jpg);
+    background-position: center;
+    animation: rotate 1.4s linear infinite;
+    transform: scale(1.05);
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(36deg);
+    }
+}
+
+.container .card .card-item {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.container .card:hover .card-item {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .card-item h2 {
+    position: absolute;
+    font-size: 9rem;
+    top: -80px;
+    right: 20px;
+    color: rgba(2, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.container .card .card-item h3 {
+    position: relative;
+    font-size: 2.2rem;
+    color: white
+}
+
+.container .card .card-item p {
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.container .card .card-item a {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    background-color: white;
+    color: #000;
+    margin-top: 15px;
+}
